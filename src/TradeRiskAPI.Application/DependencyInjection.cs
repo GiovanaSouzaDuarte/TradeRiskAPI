@@ -15,7 +15,8 @@ public static class DependencyInjection
         services.AddSingleton<IClassificationRule, MediumRiskRule>();
         services.AddSingleton<IClassificationRule, HighRiskRule>();
 
-        services.AddSingleton<ITradeClassificationService, TradeClassificationService>();
+        services.AddScoped<ITradeClassificationService, TradeClassificationService>();
+
         services.AddSingleton<ITradeAnalysisService, TradeAnalysisService>();
 
         services.AddValidatorsFromAssemblyContaining<ClassifyRequestValidator>();

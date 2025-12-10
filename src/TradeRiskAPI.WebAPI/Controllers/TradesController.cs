@@ -43,16 +43,18 @@ public class TradesController : ControllerBase
             throw new ValidationException(validationResult.Errors);
         }
 
-        var trades = request?.Trades?.Select(t => new Trade
-        {
-            Value = t.Value,
-            ClientSector = t.ClientSector
-        });
+        var trades = (request?.Trades ?? Enumerable.Empty<TradeDto>())
+       .Select(t => new Trade
+       {
+           Value = t.Value,
+           ClientSector = t.ClientSector
+       })
+       .ToList();
 
         var categories = _classificationService.ClassifyBatch(trades);
         var response = new ClassifyResponse(categories.Select(c => c.ToString()).ToList());
 
-        _logger.LogInformation("Classification completed for {Count} trades", request.Trades.Count);
+        _logger.LogInformation("Classification completed for {Count} trades", request?.Trades?.Count);
 
         return Ok(response);
     }
@@ -70,13 +72,14 @@ public class TradesController : ControllerBase
             throw new ValidationException(validationResult.Errors);
         }
 
-        var trades = request?.Trades?.Select(t => new Trade
-        {
-            Value = t.Value,
-            ClientSector = t.ClientSector,
-            ClientId = t.ClientId
-        });
-
+      var trades = (request?.Trades ?? Enumerable.Empty<TradeWithClientDto>())
+         .Select(t => new Trade
+         {
+             Value = t.Value,
+             ClientSector = t.ClientSector,
+             ClientId = t.ClientId
+         })
+         .ToList();
 
         var (categories, summary, processingTimeMs) = _analysisService.Analyze(trades);
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.OpenApi;
 using Serilog;
+using TradeRiskAPI.Application;
 using TradeRiskAPI.WebAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,14 +15,17 @@ builder.Host.UseSerilog();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "OperacaoRiskAPI",
+        Title = "TradeRiskAPI",
         Version = "v1"
     });
 });
+
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
@@ -30,8 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "OperacaoRiskAPI v1");
-        c.RoutePrefix = string.Empty; // 👈 Swagger na raiz "/"
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "TradeRiskAPI v1");
+        c.RoutePrefix = string.Empty;
     });
 }
 
