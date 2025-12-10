@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ACA50500-85A3-40B6-ADEE-0E335A576ACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeRiskAPI.Domain", "src\TradeRiskAPI.Domain\TradeRiskAPI.Domain.csproj", "{B4FBF0FB-D4EF-406B-8FB2-5A249A2A9CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeRiskAPI.Application", "src\TradeRiskAPI.Application\TradeRiskAPI.Application.csproj", "{8960A940-0394-4DB4-BC8D-D016BC26DDC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeRiskAPI.WebAPI", "src\TradeRiskAPI.WebAPI\TradeRiskAPI.WebAPI.csproj", "{8068E106-78C7-4D6A-A6CD-0A0E64977E24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2ECB7913-B94C-48FC-A103-65C44A63D944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeRiskAPI.UnitTests", "tests\TradeRiskAPI.UnitTests\TradeRiskAPI.UnitTests.csproj", "{BB126BF9-2652-491C-8586-12AF599C1C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeRiskAPI.IntegrationTests", "tests\TradeRiskAPI.IntegrationTests\TradeRiskAPI.IntegrationTests.csproj", "{9B12173D-7C4E-4214-83A5-8F90EC7B4E1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4FBF0FB-D4EF-406B-8FB2-5A249A2A9CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4FBF0FB-D4EF-406B-8FB2-5A249A2A9CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4FBF0FB-D4EF-406B-8FB2-5A249A2A9CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4FBF0FB-D4EF-406B-8FB2-5A249A2A9CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8960A940-0394-4DB4-BC8D-D016BC26DDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8960A940-0394-4DB4-BC8D-D016BC26DDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8960A940-0394-4DB4-BC8D-D016BC26DDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8960A940-0394-4DB4-BC8D-D016BC26DDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8068E106-78C7-4D6A-A6CD-0A0E64977E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8068E106-78C7-4D6A-A6CD-0A0E64977E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8068E106-78C7-4D6A-A6CD-0A0E64977E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8068E106-78C7-4D6A-A6CD-0A0E64977E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB126BF9-2652-491C-8586-12AF599C1C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB126BF9-2652-491C-8586-12AF599C1C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB126BF9-2652-491C-8586-12AF599C1C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB126BF9-2652-491C-8586-12AF599C1C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B12173D-7C4E-4214-83A5-8F90EC7B4E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B12173D-7C4E-4214-83A5-8F90EC7B4E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B12173D-7C4E-4214-83A5-8F90EC7B4E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B12173D-7C4E-4214-83A5-8F90EC7B4E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4FBF0FB-D4EF-406B-8FB2-5A249A2A9CDC} = {ACA50500-85A3-40B6-ADEE-0E335A576ACF}
+		{8960A940-0394-4DB4-BC8D-D016BC26DDC2} = {ACA50500-85A3-40B6-ADEE-0E335A576ACF}
+		{8068E106-78C7-4D6A-A6CD-0A0E64977E24} = {ACA50500-85A3-40B6-ADEE-0E335A576ACF}
+		{BB126BF9-2652-491C-8586-12AF599C1C23} = {2ECB7913-B94C-48FC-A103-65C44A63D944}
+		{9B12173D-7C4E-4214-83A5-8F90EC7B4E1C} = {2ECB7913-B94C-48FC-A103-65C44A63D944}
+	EndGlobalSection
+EndGlobal
